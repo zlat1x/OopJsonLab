@@ -11,7 +11,7 @@ namespace OopJsonLab.Models
         [JsonIgnore]
         public int PublishingHouseId { get; set; }
 
-        [JsonPropertyName("Title")]
+        [JsonPropertyName("Name")]
         public string Title { get; set; } = string.Empty;
 
         [JsonPropertyName("PublishingHouse")]
