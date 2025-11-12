@@ -3,6 +3,13 @@ using OopJsonLab.Models;
 
 var path = Path.Combine(AppContext.BaseDirectory, "Data", "books.json");
 
+if (!File.Exists(path))
+{
+    Console.WriteLine($"Файл не знайдено: {path}");
+    Console.WriteLine("Переконайтесь, що Data/books.json існує в корені проєкту і .csproj має CopyToOutputDirectory.");
+    return;
+}
+
 var options = new JsonSerializerOptions
 {
     PropertyNameCaseInsensitive = true,
