@@ -8,7 +8,7 @@ namespace OopJsonLab.Models
 {
     public class Book
     {
-        [JsonPropertyName("PublishingHouseId")]
+        [JsonIgnore]
         public int PublishingHouseId { get; set; }
 
         [JsonPropertyName("Title")]
